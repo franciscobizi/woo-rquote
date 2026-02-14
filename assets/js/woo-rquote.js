@@ -18,8 +18,10 @@ jQuery(document).ready(function($) {
         e.preventDefault();
         var btn = $(this);
         var productId = btn.data('product-id');
+        var btnText = btn.find('span span, .elementor-button-text');
+        var originalText = btnText.text();
         
-        btn.text( __( 'Adding...', 'woo-rquote' ) );
+        btnText.text( __( 'Adding...', 'woo-rquote' ) );
 
         UpdateShopCart();
 
@@ -34,10 +36,13 @@ jQuery(document).ready(function($) {
             },
             success: function(response) {
                 if (response.success) {
-                    btn.text( __( 'Added to Quote', 'woo-rquote' ) );
+                    btnText.text( __( 'Added to Quote', 'woo-rquote' ) );
+                    setTimeout(function() {
+                        btnText.text( originalText );
+                    }, 2000);
                 } else {
                     //alert(response.data.message);
-                    btn.text( __( 'Add to Quote', 'woo-rquote' ) );
+                    btnText.text( originalText );
                 }
             }
         });
