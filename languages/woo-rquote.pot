@@ -1,0 +1,238 @@
+# Copyright (C) 2026 Francisco Bizi
+# This file is distributed under the same license as the Woo RQuote plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Woo RQuote 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woo-rquote\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-13T23:40:35+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: woo-rquote\n"
+
+#. Plugin Name of the plugin
+#: woo-rquote.php
+msgid "Woo RQuote"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: woo-rquote.php
+msgid "https://github.com/franciscobizi/woo-rquote"
+msgstr ""
+
+#. Description of the plugin
+#: woo-rquote.php
+msgid "A production-ready Request a Quote plugin for WooCommerce."
+msgstr ""
+
+#. Author of the plugin
+#: woo-rquote.php
+msgid "Francisco Bizi"
+msgstr ""
+
+#. Author URI of the plugin
+#: woo-rquote.php
+msgid "https://github.com/franciscobizi"
+msgstr ""
+
+#: includes/class-rquote-ajax.php:42
+msgid "Product added to quote list."
+msgstr ""
+
+#: includes/class-rquote-ajax.php:45
+#: includes/class-rquote-ajax.php:58
+#: includes/class-rquote-ajax.php:72
+msgid "Invalid product."
+msgstr ""
+
+#: includes/class-rquote-ajax.php:55
+msgid "Product removed from quote list."
+msgstr ""
+
+#: includes/class-rquote-ajax.php:69
+msgid "Quantity updated."
+msgstr ""
+
+#: includes/class-rquote-ajax.php:83
+msgid "Please fill in all required fields."
+msgstr ""
+
+#: includes/class-rquote-ajax.php:88
+msgid "Your quote list is empty."
+msgstr ""
+
+#: includes/class-rquote-ajax.php:109
+msgid "Quote Request submitted."
+msgstr ""
+
+#: includes/class-rquote-ajax.php:119
+msgid "Thank you! Your quote request has been submitted."
+msgstr ""
+
+#. translators: 1: order ID, 2: customer name
+#: includes/class-rquote-emails.php:17
+#, php-format
+msgid "New Quote Request #%1$s from %2$s"
+msgstr ""
+
+#: includes/class-rquote-emails.php:28
+msgid "Your Quote Request Confirmation"
+msgstr ""
+
+#: includes/class-rquote-emails.php:36
+msgid "Quote Request Details"
+msgstr ""
+
+#: includes/class-rquote-emails.php:42
+#: includes/class-rquote-shortcode.php:24
+msgid "Product"
+msgstr ""
+
+#: includes/class-rquote-emails.php:43
+#: includes/class-rquote-shortcode.php:25
+msgid "Quantity"
+msgstr ""
+
+#: includes/class-rquote-emails.php:74
+msgid "Customer Information"
+msgstr ""
+
+#: includes/class-rquote-emails.php:78
+msgid "Name:"
+msgstr ""
+
+#: includes/class-rquote-emails.php:82
+msgid "Email:"
+msgstr ""
+
+#: includes/class-rquote-emails.php:86
+msgid "Phone:"
+msgstr ""
+
+#: includes/class-rquote-emails.php:90
+msgid "Address:"
+msgstr ""
+
+#: includes/class-rquote-emails.php:94
+msgid "Date:"
+msgstr ""
+
+#: includes/class-rquote-emails.php:98
+msgid "Message:"
+msgstr ""
+
+#. translators: %s: site title.
+#: includes/class-rquote-emails.php:104
+#, php-format
+msgid "This request was sent from %s."
+msgstr ""
+
+#: includes/class-rquote-settings.php:15
+#: includes/class-rquote-settings.php:32
+msgid "Woo RQuote Settings"
+msgstr ""
+
+#: includes/class-rquote-settings.php:16
+msgid "Quote Settings"
+msgstr ""
+
+#: includes/class-rquote-settings.php:40
+msgid "Hide Price"
+msgstr ""
+
+#: includes/class-rquote-settings.php:43
+msgid "Hide the product price on shop and product pages."
+msgstr ""
+
+#: includes/class-rquote-settings.php:47
+msgid "Hide Add to Cart Button"
+msgstr ""
+
+#: includes/class-rquote-settings.php:50
+msgid "Hide the default WooCommerce Add to Cart button."
+msgstr ""
+
+#: includes/class-rquote-settings.php:54
+msgid "Quote Button Text"
+msgstr ""
+
+#: includes/class-rquote-settings.php:63
+msgid "How to use"
+msgstr ""
+
+#: includes/class-rquote-settings.php:64
+msgid "Use the shortcode <code>[woo_rquote_list]</code> on any page to display the quote request list and form."
+msgstr ""
+
+#: includes/class-rquote-shortcode.php:18
+msgid "Your quote list is currently empty."
+msgstr ""
+
+#: includes/class-rquote-shortcode.php:26
+msgid "Actions"
+msgstr ""
+
+#: includes/class-rquote-shortcode.php:64
+msgid "Submit Your Quote Request"
+msgstr ""
+
+#: includes/class-rquote-shortcode.php:67
+msgid "Name *"
+msgstr ""
+
+#: includes/class-rquote-shortcode.php:71
+msgid "Email *"
+msgstr ""
+
+#: includes/class-rquote-shortcode.php:75
+msgid "Phone"
+msgstr ""
+
+#: includes/class-rquote-shortcode.php:79
+msgid "Address"
+msgstr ""
+
+#: includes/class-rquote-shortcode.php:83
+msgid "Preferred Date"
+msgstr ""
+
+#: includes/class-rquote-shortcode.php:87
+msgid "Message"
+msgstr ""
+
+#: includes/class-rquote-shortcode.php:92
+#: assets/js/woo-rquote.js:133
+msgid "Send Request"
+msgstr ""
+
+#: templates/side-cart-content-v2.php:34
+msgid "אין מוצרים בהצעת המחיר"
+msgstr ""
+
+#: templates/side-cart-content-v2.php:65
+msgid "Remove this item"
+msgstr ""
+
+#: woo-rquote.php:74
+msgid "Woo RQuote requires WooCommerce to be installed and active."
+msgstr ""
+
+#: assets/js/woo-rquote.js:22
+msgid "Adding..."
+msgstr ""
+
+#: assets/js/woo-rquote.js:37
+msgid "Added to Quote"
+msgstr ""
+
+#: assets/js/woo-rquote.js:40
+msgid "Add to Quote"
+msgstr ""
+
+#: assets/js/woo-rquote.js:115
+msgid "Sending..."
+msgstr ""

@@ -1,0 +1,116 @@
+.woo-rquote-container {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #eee;
+    background: #fff;
+}
+
+.woo-rquote-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.woo-rquote-table th, 
+.woo-rquote-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+}
+
+.product-thumbnail img {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.qty-btn {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.qty-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-left: 0;
+    border-right: 0;
+    padding: 5px;
+}
+
+.remove-item-btn {
+    background: transparent;
+    color: red;
+    border: none!important;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.woo-rquote-form-wrapper {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.form-row {
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-row input, 
+.form-row textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#woo-rquote-msg {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+#woo-rquote-msg.success {
+    background: #d4edda;
+    color: #155724;
+    display: block;
+}
+
+#woo-rquote-msg.error {
+    background: #f8d7da;
+    color: #721c24;
+    display: block;
+}
+
+.rquote-add-btn-wrapper {
+    margin-top: 10px;
+}
+
+/* .rquote-add-btn {
+    background: #007cba;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+} */
