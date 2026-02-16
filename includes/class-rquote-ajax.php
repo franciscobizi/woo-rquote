@@ -23,11 +23,9 @@ class Woo_RQuote_Ajax {
 
 	public function load_sidecart() {
 		check_ajax_referer( 'woo_rquote_nonce', 'nonce' );
-
 		ob_start();
 		include plugin_dir_path( __FILE__ ) . '../templates/side-cart-content-v2.php';
 		$content = ob_get_clean();
-
 		wp_send_json_success( array( 'content' => $content, 'status' => true ) );
 	}
 
@@ -39,7 +37,10 @@ class Woo_RQuote_Ajax {
 
 		if ( $product_id ) {
 			Woo_RQuote_Session::add_to_cart( $product_id, $quantity );
-			wp_send_json_success( array( 'message' => __( 'Product added to quote list.', 'woo-rquote' ) ) );
+			ob_start();
+			include plugin_dir_path( __FILE__ ) . '../templates/side-cart-content-v2.php';
+			$content = ob_get_clean();
+			wp_send_json_success( array( 'content' => $content, 'message' => __( 'Product added to quote list.', 'woo-rquote' ) ) );
 		}
 
 		wp_send_json_error( array( 'message' => __( 'Invalid product.', 'woo-rquote' ) ) );

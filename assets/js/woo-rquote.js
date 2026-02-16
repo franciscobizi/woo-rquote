@@ -17,13 +17,11 @@ jQuery(document).ready(function($) {
     $(document).on('click', '.rquote-add-btn', function(e) {
         e.preventDefault();
         var btn = $(this);
-        var productId = btn.data('product-id');
+        var productId = btn.attr('data-product-id');
         var btnText = btn.find('span span, .elementor-button-text');
         var originalText = btnText.text();
         
         btnText.text( __( 'Adding...', 'woo-rquote' ) );
-
-        UpdateShopCart();
 
         $.ajax({
             url: woo_rquote_params.ajax_url,
@@ -39,6 +37,10 @@ jQuery(document).ready(function($) {
                     btnText.text( __( 'Added to Quote', 'woo-rquote' ) );
                     setTimeout(function() {
                         btnText.text( originalText );
+                        let classes = document.querySelector('.woopp-side-basket');
+                        let updatedContent = response.data.content.replace('woopp-side-basket', classes.classList);
+                        $('.woopp-side-container').html(updatedContent);
+
                     }, 2000);
                 } else {
                     //alert(response.data.message);
@@ -52,7 +54,7 @@ jQuery(document).ready(function($) {
     $(document).on('click', '.remove-item-btn', function(e) {
         e.preventDefault();
         var btn = $(this);
-        var productId = btn.data('product-id');
+        var productId = btn.attr('data-product-id');
         UpdateShopCart();
         $.ajax({
             url: woo_rquote_params.ajax_url,
@@ -83,7 +85,7 @@ jQuery(document).ready(function($) {
     $(document).on('click', '.qty-btn', function() {
         var btn = $(this);
         var row = btn.closest('tr');
-        var productId = row.data('product-id');
+        var productId = row.attr('data-product-id');
         var input = row.find('.qty-input');
         var currentVal = parseInt(input.val());
 
@@ -151,6 +153,7 @@ jQuery(document).ready(function($) {
         }
 
         function RefreshCartContent(){
+
             jQuery.ajax({
                url: woo_rquote_params.ajax_url,
                type: 'POST',
@@ -163,7 +166,7 @@ jQuery(document).ready(function($) {
                   if(res.data.status){
                     let classes = document.querySelector('.woopp-side-basket');
                     let updatedContent = res.data.content.replace('woopp-side-basket', classes.classList);
-                    jQuery('.woopp-side-container').html(updatedContent);
+                    $('.woopp-side-container').html(updatedContent);
                   }
                },
                complete: function(){
