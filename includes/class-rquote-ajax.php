@@ -107,7 +107,7 @@ class Woo_RQuote_Ajax {
 		// Add custom meta data
 		$order->update_meta_data( '_rquote_date', sanitize_text_field( $form_data['rquote_date'] ) );
 		$order->update_meta_data( '_rquote_message', sanitize_textarea_field( $form_data['rquote_message'] ) );
-		$order->set_status( 'pending', __( 'Quote Request submitted.', 'woo-rquote' ) );
+		$order->set_status( 'pending', __( 'Thank you! Your quote request has been submitted.', 'woo-rquote' ) );
 		$order->save();
 
 		// Trigger Email

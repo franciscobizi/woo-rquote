@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
         var btn = $(this);
         var productId = btn.attr('data-product-id');
         var btnText = btn.find('span span, .elementor-button-text');
-        var originalText = btnText.text();
+        var originalText = btn.text();
         
         btnText.text( __( 'Adding...', 'woo-rquote' ) );
 
@@ -43,7 +43,6 @@ jQuery(document).ready(function($) {
 
                     }, 2000);
                 } else {
-                    //alert(response.data.message);
                     btnText.text( originalText );
                 }
             }
@@ -131,10 +130,10 @@ jQuery(document).ready(function($) {
             },
             success: function(response) {
                 if (response.success) {
+                    UpdateShopCart();
                     msgDiv.addClass('success').text(response.data.message).show();
-                    form.slideUp();
+                    $('.woo-rquote-form-wrapper').slideUp();
                     $('.woo-rquote-table-wrapper').slideUp();
-                    $('.woo-rquote-empty-msg').show();
                 } else {
                     msgDiv.addClass('error').text(response.data.message).show();
                     submitBtn.prop('disabled', false).text( __( 'Send Request', 'woo-rquote' ) );

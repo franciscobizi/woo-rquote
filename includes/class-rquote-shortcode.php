@@ -33,7 +33,7 @@ class Woo_RQuote_Shortcode {
 								?>
 								<tr data-product-id="<?php echo esc_attr( $item['product_id'] ); ?>">
 									<td class="product-info">
-										<div class="product-thumbnail">
+										<div class="product-thumbnail" style="margin-left: 10px;">
 											<?php echo $product->get_image( 'thumbnail' ); ?>
 										</div>
 										<div class="product-name">
@@ -93,9 +93,9 @@ class Woo_RQuote_Shortcode {
 							</button>
 							<span class="spinner-loader" style="display:none;"></span>
 						</div>
-						<div id="woo-rquote-msg"></div>
 					</form>
 				</div>
+				<div id="woo-rquote-msg"></div>
 			<?php endif; ?>
 		</div>
 		<?php

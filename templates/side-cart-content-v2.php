@@ -3,14 +3,14 @@
     $items = [];
     if ( class_exists( 'Woo_RQuote_Session' ) ) {
         $items = Woo_RQuote_Session::get_cart();
-        if(count($items) === 0 && isset($product_id) && isset($quantity)){
+        /* if(count($items) === 0 && isset($product_id) && isset($quantity)){
              $items = [
                 [
                     'product_id' => $product_id,
                     'quantity' => $quantity
                 ]
             ];
-        }
+        } */
     }
 ?>
 <div class="woopp-side-basket">

@@ -38,6 +38,9 @@ class Woo_RQuote {
 	 * Initialize the plugin
 	 */
 	public function __construct() {
+		
+		add_action( 'template_redirect', array( $this, 'rq_bypass_home_cache' ) );
+
 		// Check if WooCommerce is active
 		if ( ! $this->is_woocommerce_active() ) {
 			add_action( 'admin_notices', array( $this, 'woocommerce_missing_notice' ) );
@@ -46,6 +49,23 @@ class Woo_RQuote {
 
 		$this->includes();
 		$this->init_hooks();
+	}
+
+	/**
+	 * Bypass cache for homepage to ensure dynamic quote updates
+	 */
+	public function rq_bypass_home_cache() {
+
+		// Only on frontend
+		if ( is_admin() ) {
+			return;
+		}
+
+		// Only if it's the homepage and user is not logged in and 'q' parameter is not set
+		if (!is_user_logged_in() && is_front_page() && ! isset($_GET['q']) ) {
+			wp_redirect( home_url( '/?q=1' ) );
+			exit;
+		}
 	}
 
 	/**
